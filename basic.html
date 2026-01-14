@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Humanoid Robot - Modular Team Project</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            overflow: hidden;
+            font-family: Arial, sans-serif;
+        }
+        
+        #info {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            color: white;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 15px;
+            border-radius: 8px;
+            font-size: 14px;
+            z-index: 100;
+            max-width: 300px;
+        }
+        
+        #info h2 {
+            margin: 0 0 10px 0;
+            font-size: 18px;
+            color: #4a90e2;
+        }
+        
+        #info p {
+            margin: 5px 0;
+            line-height: 1.4;
+        }
+        
+        #current-animation {
+            color: #7cb5f7;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div id="info">
+        <h2>🤖 Humanoid Robot</h2>
+        <p>Current Animation: <span id="current-animation">Idle</span></p>
+        <p>▸ Idle → Walk → Run → Head Turn → Jump</p>
+        <p>🎥 Camera auto-orbits</p>
+    </div>
+
+    <script src="./js/three.min.js"></script>
+
+
+
+    <!-- Load modular scripts IN ORDER (explicit relative paths) -->
+    <script src="./js/1-scene-setup.js"></script>
+    <script src="./js/1.5-geometry-utils.js"></script>
+    <script src="./js/2-robot-class.js"></script>
+    <script src="./js/2.5-gait-engine.js"></script>
+    <script src="./js/3-animations.js"></script>
+    <script src="./js/4-controls.js"></script>
+    <script src="./js/5-animation-manager.js"></script>
+    <script src="./js/6-main.js"></script>
+</body>
+</html>
