@@ -2,16 +2,6 @@
 
 An interactive 3D humanoid robot built with Three.js, featuring realistic walking animations, procedural gait generation, and modular animation system. This project demonstrates advanced computer graphics concepts including hierarchical modeling, inverse kinematics, and procedural animation.
 
-##  Table of Contents
-- [Features](#features)
-- [Demo](#demo)
-- [Technologies](#technologies)
-- [Project Structure](#project-structure)
-- [Getting Started](#getting-started)
-- [Animation System](#animation-system)
-- [Architecture](#architecture)
-- [Controls](#controls)
-- [Authors](#authors)
 
 ##  Features
 
@@ -33,6 +23,30 @@ Open `basic.html` in a modern web browser to see the robot in action. The robot 
 - **JavaScript (ES6+)** - Core programming language
 - **HTML5 Canvas** - Rendering context
 - **WebGL** - Low-level graphics API
+
+##  Architecture
+
+The project follows a modular architecture with clear separation of concerns:
+
+```
+┌─────────────────┐
+│   Main Loop     │ (6-main.js)
+└────────┬────────┘
+         │
+         ├─────────────────┬─────────────────┬──────────────────┐
+         │                 │                 │                  │
+┌────────▼────────┐ ┌──────▼──────┐ ┌────────▼────────┐ ┌──────▼──────┐
+│ Animation Mgr   │ │   Robot     │ │    Scene        │ │   Controls  │
+│ (5-*.js)        │ │   (2-*.js)  │ │    (1-*.js)     │ │   (4-*.js)  │
+└─────────────────┘ └──────┬──────┘ └─────────────────┘ └─────────────┘
+                           │
+                    ┌──────▼──────┐
+                    │ Gait Engine │
+                    │ (2.5-*.js)  │
+                    └─────────────┘
+```
+
+
 
 ##  Project Structure
 
@@ -99,45 +113,17 @@ The project features a sophisticated animation system:
 - **Joint Constraints**: Realistic range of motion for hips, knees, and ankles
 - **Phase-based Movement**: Synchronizes left and right leg movements
 
-### Animation States
+Currently, the robot is set to auto-play animations:
+- **Camera**: Automatically orbits around the robot
+- **Animations**: Cycle automatically through different states
+  
+*Note: User controls are currently disabled but can be re-enabled in `4-controls.js`*
 - **Idle**: Subtle breathing motion
 - **Walk**: Natural walking gait with arm swing
 - **Run**: Faster movement with increased stride
 - **Custom Sequences**: Easily extensible for new animations
 
-##  Architecture
-
-The project follows a modular architecture with clear separation of concerns:
-
-```
-┌─────────────────┐
-│   Main Loop     │ (6-main.js)
-└────────┬────────┘
-         │
-         ├─────────────────┬─────────────────┬──────────────────┐
-         │                 │                 │                  │
-┌────────▼────────┐ ┌──────▼──────┐ ┌────────▼────────┐ ┌──────▼──────┐
-│ Animation Mgr   │ │   Robot     │ │    Scene        │ │   Controls  │
-│ (5-*.js)        │ │   (2-*.js)  │ │    (1-*.js)     │ │   (4-*.js)  │
-└─────────────────┘ └──────┬──────┘ └─────────────────┘ └─────────────┘
-                           │
-                    ┌──────▼──────┐
-                    │ Gait Engine │
-                    │ (2.5-*.js)  │
-                    └─────────────┘
-```
-
-##  Controls
-
-Currently, the robot is set to auto-play animations:
-- **Camera**: Automatically orbits around the robot
-- **Animations**: Cycle automatically through different states
-
-*Note: User controls are currently disabled but can be re-enabled in `4-controls.js`*
 
 
-## 🙏 Acknowledgments
 
-- Built with [Three.js](https://threejs.org/)
-- Computer Graphics Course Project
 
