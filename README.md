@@ -2,6 +2,7 @@
 
 An interactive 3D humanoid robot built with Three.js, featuring realistic walking animations, procedural gait generation, and modular animation system. This project demonstrates advanced computer graphics concepts including hierarchical modeling, inverse kinematics, and procedural animation.
 
+Open `basic.html` in a modern web browser to see the robot in action. The robot will automatically cycle through different animations.
 
 ##  Features
 
@@ -13,9 +14,6 @@ An interactive 3D humanoid robot built with Three.js, featuring realistic walkin
 - **Dynamic Camera**: Orbiting camera that follows the robot
 - **Interactive UI**: Real-time display of current animation state
 
-##  Demo
-
-Open `basic.html` in a modern web browser to see the robot in action. The robot will automatically cycle through different animations.
 
 ##  Technologies
 
