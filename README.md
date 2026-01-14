@@ -1,8 +1,8 @@
-# 🤖 3D Humanoid Robot Animation with Three.js
+# 3D Humanoid Robot Animation with Three.js
 
 An interactive 3D humanoid robot built with Three.js, featuring realistic walking animations, procedural gait generation, and modular animation system. This project demonstrates advanced computer graphics concepts including hierarchical modeling, inverse kinematics, and procedural animation.
 
-## 📋 Table of Contents
+##  Table of Contents
 - [Features](#features)
 - [Demo](#demo)
 - [Technologies](#technologies)
@@ -13,7 +13,7 @@ An interactive 3D humanoid robot built with Three.js, featuring realistic walkin
 - [Controls](#controls)
 - [Authors](#authors)
 
-## ✨ Features
+##  Features
 
 - **Realistic Humanoid Model**: Fully articulated robot with hierarchical joint structure
 - **Procedural Walking Animation**: Physics-based gait engine with smooth transitions
@@ -23,18 +23,18 @@ An interactive 3D humanoid robot built with Three.js, featuring realistic walkin
 - **Dynamic Camera**: Orbiting camera that follows the robot
 - **Interactive UI**: Real-time display of current animation state
 
-## 🎥 Demo
+##  Demo
 
 Open `basic.html` in a modern web browser to see the robot in action. The robot will automatically cycle through different animations.
 
-## 🛠️ Technologies
+##  Technologies
 
 - **Three.js** - 3D graphics library for WebGL rendering
 - **JavaScript (ES6+)** - Core programming language
 - **HTML5 Canvas** - Rendering context
 - **WebGL** - Low-level graphics API
 
-## 📁 Project Structure
+##  Project Structure
 
 ```
 .
@@ -89,50 +89,8 @@ Open `basic.html` in a modern web browser to see the robot in action. The robot 
    - Render loop
    - Camera orbit control
 
-## 🚀 Getting Started
 
-### Prerequisites
-
-- A modern web browser (Chrome, Firefox, Safari, or Edge)
-- No build tools or dependencies required!
-
-### Installation
-
-1. Clone the repository:
-```bash
-git clone https://github.com/yourusername/robot-with-extra-background.git
-cd robot-with-extra-background
-```
-
-2. Open `basic.html` in your web browser:
-```bash
-# On Windows
-start basic.html
-
-# On macOS
-open basic.html
-
-# On Linux
-xdg-open basic.html
-```
-
-Or simply drag and drop `basic.html` into your browser.
-
-### Running with Local Server (Optional)
-
-For better performance and to avoid CORS issues, you can run a local server:
-
-```bash
-# Python 3
-python -m http.server 8000
-
-# Node.js (requires http-server: npm install -g http-server)
-http-server
-
-# Then open http://localhost:8000/basic.html
-```
-
-## 🎬 Animation System
+##  Animation System
 
 The project features a sophisticated animation system:
 
@@ -147,7 +105,7 @@ The project features a sophisticated animation system:
 - **Run**: Faster movement with increased stride
 - **Custom Sequences**: Easily extensible for new animations
 
-## 🏗️ Architecture
+##  Architecture
 
 The project follows a modular architecture with clear separation of concerns:
 
@@ -169,7 +127,7 @@ The project follows a modular architecture with clear separation of concerns:
                     └─────────────┘
 ```
 
-## 🎮 Controls
+##  Controls
 
 Currently, the robot is set to auto-play animations:
 - **Camera**: Automatically orbits around the robot
@@ -177,23 +135,9 @@ Currently, the robot is set to auto-play animations:
 
 *Note: User controls are currently disabled but can be re-enabled in `4-controls.js`*
 
-## 👥 Authors
-
-**Term Project for Computer Vision Course**
-
-- **Ahmad Al-Khairat** - Developer
-- **Sardor Hazratov** - Developer
-
-## 📄 License
-
-This project is available for educational purposes.
 
 ## 🙏 Acknowledgments
 
 - Built with [Three.js](https://threejs.org/)
-- Computer Vision Course Project
-- Inspired by robotic animation and procedural motion synthesis
+- Computer Graphics Course Project
 
----
-
-**Built with ❤️ using WebGL and Three.js**
